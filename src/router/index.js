@@ -15,6 +15,7 @@ const routes = [
     meta: {
       text: "Hey User",
       leading: true,
+      isShowFooter: true,
     },
     component: () => import(/* webpackChunkName: "home" */ "../views/index.vue"),
   },
@@ -42,6 +43,7 @@ const routes = [
     meta: {
       text: "Profile",
       leading: false,
+      isShowFooter: true,
     },
     component: () =>
       import(/* webpackChunkName: "profile" */ "../views/profile.vue"),
@@ -53,6 +55,7 @@ const routes = [
     meta: {
       text: "Budget",
       leading: false,
+      isShowFooter: true,
     },
     component: () =>
       import(/* webpackChunkName: "budget" */ "../views/budget.vue"),
@@ -64,6 +67,7 @@ const routes = [
     meta: {
       text: "Report",
       leading: false,
+      isShowFooter: true,
     },
     component: () =>
       import(/* webpackChunkName: "report" */ "../views/report.vue"),
@@ -73,8 +77,9 @@ const routes = [
     path: "/new-transaction",
     name: "NewTransaction",
     meta: {
-      text: "NewTransaction",
+      text: "New Transaction",
       leading: false,
+      isShowFooter: false,
     },
     component: () =>
       import(/* webpackChunkName: "transaction" */ "../views/new-transaction.vue"),

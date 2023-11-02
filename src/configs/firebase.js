@@ -28,6 +28,7 @@
 import firebase from "firebase/compat/app";
 import "firebase/compat/firestore";
 import "firebase/compat/auth";
+import "firebase/compat/storage"
 
 
 // TODO: Replace the following with your app's Firebase project configuration
@@ -48,7 +49,8 @@ firebase.initializeApp(firebaseConfig);
 // Initialize Cloud Firestore and get a reference to the service
 const auth = firebase.auth();
 const db = firebase.firestore();
+const storage = firebase.storage();
 const timestamp = firebase.firestore.FieldValue.serverTimestamp;
 
 
-export { db, auth, timestamp };
+export { db, auth, timestamp, storage };
